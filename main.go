@@ -1,7 +1,11 @@
+/*
+Copyright © 2022 Schaffer Stewart <SchaeStewart@gmail.com>
+
+*/
 package main
 
-import "fmt"
+import "github.com/SchaeStewart/lmk/cmd"
 
 func main() {
-	fmt.Println("hello world")
+	cmd.Execute()
 }
