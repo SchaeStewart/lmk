@@ -11,15 +11,12 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/0xAX/notificator"
+	"github.com/gen2brain/beeep"
 	"github.com/spf13/cobra"
 )
 
 func notify(title, body string) error {
-	notifier := notificator.New(notificator.Options{
-		AppName: "LMK",
-	})
-	return notifier.Push(title, body, "", notificator.UR_NORMAL)
+	return beeep.Alert(title, body, "")
 }
 
 func timer() func() time.Duration {
